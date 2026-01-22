@@ -1,6 +1,5 @@
 import { createSearch, decodeHtmlEntities } from 'common/string';
 import { Fragment } from 'inferno';
-
 import { useBackend, useLocalState } from "../backend";
 import { Box, Button, Flex, Icon, Input, LabeledList, Section, Table, Tabs } from '../components';
 import { FlexItem } from '../components/Flex';

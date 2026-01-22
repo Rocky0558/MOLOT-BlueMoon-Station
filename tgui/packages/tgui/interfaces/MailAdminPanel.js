@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { Box, Button, Collapsible, Dropdown, Flex, LabeledList, NoticeBox, Section } from '../components';
+import { Section, Dropdown, Button, NoticeBox, LabeledList, Collapsible, Flex, Box } from '../components';
 import { Window } from '../layouts';
 
 export const MailAdminPanel = (props, context) => {
@@ -22,7 +22,7 @@ export const SubsystemInfoReadout = (props, context) => {
     unopen_mails,
     waiting_mails,
     next_fire,
-  } = data;
+  } = data
 
   return (
     <Collapsible title="Общая Информация" open>
@@ -37,7 +37,8 @@ export const SubsystemInfoReadout = (props, context) => {
                 tooltip="Прыгнуть к главному хранилищу с почтой."
                 onClick={() => act('jump_to_storage')}
               />
-            } />
+            }>
+          </LabeledList.Item>
           <LabeledList.Item
             label="Всего писем за раунд"
             color="green">
@@ -55,8 +56,8 @@ export const SubsystemInfoReadout = (props, context) => {
         </LabeledList>
       </Section>
     </Collapsible>
-  );
-};
+  )
+}
 
 export const PlayerChoosingPanel = (props, context) => {
   const { act, data } = useBackend(context);
@@ -66,7 +67,7 @@ export const PlayerChoosingPanel = (props, context) => {
     chosen_player_name,
     chosen_player_ckey,
     chosen_player_assignment,
-  } = data;
+  } = data
 
   return (
     <Collapsible title="Выбор Игрока" open>
@@ -89,7 +90,7 @@ export const PlayerChoosingPanel = (props, context) => {
               width="100%"
               selected="Выберите игрока..."
               options={player_names}
-              onSelected={(value) => act("select_player", { player_name: value })}
+              onSelected={(value) => act("select_player", {player_name: value})}
             />
           </LabeledList.Item>
             {player_names ? (
@@ -113,8 +114,8 @@ export const PlayerChoosingPanel = (props, context) => {
       </Flex>
       </Section>
     </Collapsible>
-  );
-};
+  )
+}
 
 export const MailCreationPanel = (props, context) => {
   const { act, data } = useBackend(context);
@@ -123,8 +124,8 @@ export const MailCreationPanel = (props, context) => {
     available_categories,
     available_patterns,
     chosen_player_name,
-    info_on_displayed_pattern,
-  } = data;
+    info_on_displayed_pattern
+  } = data
 
   return (
       <Collapsible title="Выбор шаблона" open>
@@ -139,7 +140,7 @@ export const MailCreationPanel = (props, context) => {
                   width="100%"
                   selected="Выберите категорию..."
                   options={available_categories}
-                  onSelected={(value) => act("choose_category", { chosen_category: value })}
+                  onSelected={(value) => act("choose_category", {chosen_category: value})}
                 />
               </LabeledList.Item>
               <LabeledList.Item
@@ -151,7 +152,7 @@ export const MailCreationPanel = (props, context) => {
                     width="100%"
                     selected="Выберите шаблон..."
                     options={available_patterns}
-                    onSelected={(value) => act("choose_pattern", { chosen_pattern: value })}
+                    onSelected={(value) => act("choose_pattern", {chosen_pattern: value})}
                   />
                 ) : (
                   <NoticeBox>
@@ -222,5 +223,5 @@ export const MailCreationPanel = (props, context) => {
           </Flex>
         </Section>
       </Collapsible>
-  );
-};
+  )
+}

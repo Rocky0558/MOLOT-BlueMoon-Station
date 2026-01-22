@@ -1,10 +1,9 @@
 import { Component } from 'inferno';
-
+import { Box, Icon, Tooltip, Button } from '.';
 import { useBackend } from "../backend";
-import { Box, Button, Icon, Tooltip } from '.';
-import { getBoundingBox } from "./ByondUi";
 import { LabeledList } from './LabeledList';
 import { Slider } from './Slider';
+import { getBoundingBox } from "./ByondUi";
 
 const pauseEvent = e => {
   if (e.stopPropagation) { e.stopPropagation(); }

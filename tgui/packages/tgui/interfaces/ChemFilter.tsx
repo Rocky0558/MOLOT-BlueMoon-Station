@@ -1,7 +1,7 @@
 import { useBackend } from '../backend';
-import { Button, Section, Stack } from '../components';
-import { CSS_COLORS } from '../constants';
+import { Button, Stack, Section } from '../components';
 import { Window } from '../layouts';
+import { CSS_COLORS } from '../constants';
 
 type Data = {
   left?: string[];

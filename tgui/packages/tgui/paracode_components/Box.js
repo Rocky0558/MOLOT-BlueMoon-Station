@@ -7,7 +7,6 @@
 import { classes, isFalsy, pureComponentHooks } from 'common/react';
 import { createVNode } from 'inferno';
 import { ChildFlags, VNodeFlags } from 'inferno-vnode-flags';
-
 import { CSS_COLORS } from '../constants';
 
 const UNIT_PX = 12;

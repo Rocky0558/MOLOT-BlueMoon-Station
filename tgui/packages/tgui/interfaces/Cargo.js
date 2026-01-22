@@ -1,9 +1,8 @@
 import { toArray } from 'common/collections';
-import { createSearch } from 'common/string';
 import { Fragment } from 'inferno';
 
 import { useBackend, useSharedState } from '../backend';
-import { AnimatedNumber, Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from '../components';
+import { AnimatedNumber, Box, Button, Flex, LabeledList, Section, Table, Tabs } from '../components';
 import { formatMoney } from '../format';
 import { Window } from '../layouts';
 
@@ -143,29 +142,14 @@ export const CargoCatalog = (props, context) => {
   const activeSupply = supplies.find(supply => {
     return supply.name === activeSupplyName;
   });
-  const [searchText, setSearchText] = useSharedState(context, 'searchText', '');
-  const searchFn = createSearch(searchText, (pack) => pack.name + ' ' + pack.desc);
-  const isSearching = searchText.length >= 2;
-  let displayedPacks = [];
-  if (isSearching) {
-    displayedPacks = supplies.flatMap(supply => supply.packs).filter(searchFn);
-  } else {
-    displayedPacks = activeSupply?.packs || [];
-  }
   return (
     <Section
       title="Catalog"
-      buttons={(
+      buttons={!express && (
         <Fragment>
-          {!express && <CargoCartButtons />}
-          <Input
-            placeholder="Search..."
-            value={searchText}
-            onInput={(e, value) => setSearchText(value)}
-            mx={1}
-          />
+          <CargoCartButtons />
           <Button.Checkbox
-            ml={1}
+            ml={2}
             content="Buy Privately"
             checked={self_paid}
             onClick={() => act('toggleprivate')} />
@@ -177,24 +161,16 @@ export const CargoCatalog = (props, context) => {
             {supplies.map(supply => (
               <Tabs.Tab
                 key={supply.name}
-                selected={!isSearching && supply.name === activeSupplyName}
-                onClick={() => {
-                  setActiveSupplyName(supply.name);
-                  setSearchText('');
-                }}>
+                selected={supply.name === activeSupplyName}
+                onClick={() => setActiveSupplyName(supply.name)}>
                 {supply.name} ({supply.packs.length})
               </Tabs.Tab>
             ))}
           </Tabs>
         </Flex.Item>
         <Flex.Item grow={1} basis={0}>
-          {isSearching && (
-            <Box color="label" mb={1}>
-              Found {displayedPacks.length} result{displayedPacks.length !== 1 ? 's' : ''}
-            </Box>
-          )}
           <Table>
-            {displayedPacks.map(pack => {
+            {activeSupply?.packs.map(pack => {
               const tags = [];
               if (pack.small_item) {
                 tags.push('Small');
@@ -204,7 +180,7 @@ export const CargoCatalog = (props, context) => {
               }
               return (
                 <Table.Row
-                  key={pack.id}
+                  key={pack.name}
                   className="candystripe">
                   <Table.Cell>
                     {pack.name}

@@ -1,8 +1,7 @@
+import { useLocalState } from '../backend';
 import { useBackend } from 'tgui/backend';
 import { Button, Input, Section, Stack, Tabs } from 'tgui/components';
 import { Window } from 'tgui/layouts';
-
-import { useLocalState } from '../backend';
 
 type Data = {
   availability: number;

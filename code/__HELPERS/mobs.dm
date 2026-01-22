@@ -635,12 +635,10 @@ GLOBAL_LIST_EMPTY(species_datums)
 		if("tapered") return "утончённый член"
 		if("tentacle") return "тентяклевидный член"
 		if("taperedteshari") return "тешарьский член"
-		if("taperedbarbed") return "утонченный шипованный член"
-		if("thick", "nondescript") return "обрезанный член"
-		// Если кто-то это будет трогать, придумайте что-то с окончаниями (автор не соизволил)
-		if("hemi") return "двойные члены"
+		if("hemi") return "двойными членами"
 		if("hemiknot") return "двойные узловатые члены"
 		if("bhemiknot") return "двойные с узлами колючие члены"
-
+		if("taperedbarbed") return "утонченный шипованный член"
+		if("thick", "nondescript") return "обрезанный член"
 		else return "необычной формы член"
 

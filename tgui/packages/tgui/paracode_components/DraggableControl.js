@@ -7,7 +7,6 @@
 import { clamp } from 'common/math';
 import { pureComponentHooks } from 'common/react';
 import { Component, createRef } from 'inferno';
-
 import { AnimatedNumber } from './AnimatedNumber';
 
 /**

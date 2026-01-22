@@ -26921,10 +26921,6 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/plasteel,
 /area/mine/xenoarch)
-"wme" = (
-/obj/effect/ash_rune,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/lavaland/unpowered/ash_walkers)
 "wmg" = (
 /obj/structure/stone_tile/surrounding_tile/burnt{
 	dir = 8
@@ -99269,7 +99265,7 @@ nBA
 nBA
 nBA
 nBA
-wme
+nBA
 nBA
 nBA
 nBA
@@ -156554,7 +156550,7 @@ ivD
 lzC
 nBA
 nBA
-wme
+nBA
 nBA
 nBA
 vAU

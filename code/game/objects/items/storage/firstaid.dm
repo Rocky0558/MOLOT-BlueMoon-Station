@@ -261,7 +261,6 @@
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	obj_flags = UNIQUE_RENAME
 
 /obj/item/storage/pill_bottle/ComponentInitialize()
 	. = ..()

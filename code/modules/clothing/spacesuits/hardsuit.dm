@@ -118,28 +118,28 @@
 /obj/item/clothing/suit/space/hardsuit/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/tank/jetpack/suit))
 		if(jetpack)
-			to_chat(user, "<span class='warning'>[src] уже имеет реактивный ранец.</span>")
+			to_chat(user, "<span class='warning'>[src] already has a jetpack installed.</span>")
 			return
 		if(src == user.get_item_by_slot(ITEM_SLOT_OCLOTHING)) //Make sure the player is not wearing the suit before applying the upgrade.
-			to_chat(user, "<span class='warning'>Вы не можете улучшить [src], пока носите его.</span>")
+			to_chat(user, "<span class='warning'>You cannot install the upgrade to [src] while wearing it.</span>")
 			return
 
 		if(user.transferItemToLoc(I, src))
 			jetpack = I
-			to_chat(user, "<span class='notice'>Вы успешно установили реактивный ранец на [src].</span>")
+			to_chat(user, "<span class='notice'>You successfully install the jetpack into [src].</span>")
 			return
 	else if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		if(!jetpack)
-			to_chat(user, "<span class='warning'>[src] не имеет реактивного ранца.</span>")
+			to_chat(user, "<span class='warning'>[src] has no jetpack installed.</span>")
 			return
 		if(src == user.get_item_by_slot(ITEM_SLOT_OCLOTHING))
-			to_chat(user, "<span class='warning'>Вы не можете снять реактивный ранец с [src], пока носите его.</span>")
+			to_chat(user, "<span class='warning'>You cannot remove the jetpack from [src] while wearing it.</span>")
 			return
 
 		jetpack.turn_off(user)
 		jetpack.forceMove(drop_location())
 		jetpack = null
-		to_chat(user, "<span class='notice'>Вы успешно сняли реактивный ранец с [src].</span>")
+		to_chat(user, "<span class='notice'>You successfully remove the jetpack from [src].</span>")
 		return
 	return ..()
 

@@ -756,14 +756,9 @@ SUBSYSTEM_DEF(job)
 			return
 		for(var/i in chosen_gear)
 			var/datum/gear/G = istext(i[LOADOUT_ITEM]) ? text2path(i[LOADOUT_ITEM]) : i[LOADOUT_ITEM]
-			if(!ispath(G, /datum/gear))
+			if(!ispath(G))
 				continue
-			var/cat = initial(G.category)
-			var/subcat = initial(G.subcategory)
-			var/gname = initial(G.name)
-			if(!GLOB.loadout_items[cat] || !GLOB.loadout_items[cat][subcat])
-				continue
-			G = GLOB.loadout_items[cat][subcat][gname]
+			G = GLOB.loadout_items[initial(G.category)][initial(G.subcategory)][initial(G.name)]
 			if(!G)
 				continue
 			var/permitted = TRUE
@@ -858,14 +853,9 @@ SUBSYSTEM_DEF(job)
 			return
 		for(var/i in chosen_gear)
 			var/datum/gear/G = istext(i[LOADOUT_ITEM]) ? text2path(i[LOADOUT_ITEM]) : i[LOADOUT_ITEM]
-			if(!ispath(G, /datum/gear))
+			if(!ispath(G))
 				continue
-			var/cat = initial(G.category)
-			var/subcat = initial(G.subcategory)
-			var/gname = initial(G.name)
-			if(!GLOB.loadout_items[cat] || !GLOB.loadout_items[cat][subcat])
-				continue
-			G = GLOB.loadout_items[cat][subcat][gname]
+			G = GLOB.loadout_items[initial(G.category)][initial(G.subcategory)][initial(G.name)]
 			if(!G)
 				continue
 			var/permitted = TRUE

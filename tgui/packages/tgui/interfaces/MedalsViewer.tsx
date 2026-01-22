@@ -1,5 +1,4 @@
 import { BooleanLike, classes } from 'common/react';
-
 import { useBackend } from '../backend';
 import { Section } from '../components';
 import { Window } from '../layouts';

@@ -6,7 +6,6 @@
 
 import { classes, isFalsy } from 'common/react';
 import { Component, createRef } from 'inferno';
-
 import { Box } from './Box';
 
 const toInputValue = value => {

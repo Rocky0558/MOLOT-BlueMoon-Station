@@ -1,5 +1,4 @@
 import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';

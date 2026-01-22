@@ -1,7 +1,8 @@
+import { Fragment } from 'inferno';
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Icon, Section } from '../components';
+import { Box, Button, Icon, Section, Flex } from '../components';
 import { Window } from "../layouts";
 
 export const Safe = (properties, context) => {

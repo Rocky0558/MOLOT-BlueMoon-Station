@@ -46,7 +46,7 @@
 		return FALSE
 
 	// Sandstorm Edit
-	if(mob.shifting || mob.tilting)
+	if(mob.shifting)
 		mob.pixel_shift(direction)
 		return FALSE
 	else if(mob.is_shifted)

@@ -3,7 +3,6 @@
 	description = null
 	simple_style = "lewd"
 	interaction_flags = INTERACTION_FLAG_ADJACENT | INTERACTION_FLAG_OOC_CONSENT
-	interaction_sound_volume = 70
 
 	/// Use the number of required feet.
 	var/require_user_num_feet

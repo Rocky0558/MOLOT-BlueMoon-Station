@@ -1,5 +1,6 @@
 import { useBackend, useLocalState } from '../../backend';
-import { Button, Icon, Input, Section, Slider, Stack, Tabs } from '../../components';
+import { Button, Icon, Input, Section, Tabs, Stack, Slider } from '../../components';
+
 import {
   CharacterPrefsTab,
   ContentPreferencesTab,
