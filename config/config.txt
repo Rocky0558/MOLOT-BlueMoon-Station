@@ -12,7 +12,7 @@
 # There are various options which are hard-locked for security reasons.
 
 
-$include entries/admin.txt
+include entries/admin.txt
 $include entries/alert.txt
 $include entries/antag_rep.txt
 $include entries/bot.txt
@@ -32,11 +32,11 @@ $include entries/policy.txt
 $include entries/resources.txt
 $include entries/respawns.txt
 $include entries/security.txt
-$include entries/server.txt
+include entries/server.txt
 $include entries/stamina_combat.txt
 $include entries/threat.txt
 $include entries/urls.txt
-$include entries/vote.txt
+include entries/vote.txt
 
 $include plushies/defines.txt
 
