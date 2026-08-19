@@ -1726,8 +1726,6 @@
 /obj/item/modkit/vp78tactic
 	name = "VP78 Tactic ModKit"
 	desc = "A modkit for making an tactic version of Enforcer pistol."
-//	icon = 'modular_bluemoon/icons/obj/guns/gunkit.dmi'
-//	icon_state = "vp78"
 	product = /obj/item/gun/ballistic/automatic/pistol/enforcer/vp78tactic
 	fromitem = list(/obj/item/gun/ballistic/automatic/pistol/enforcer, /obj/item/gun/ballistic/automatic/pistol/enforcer/nomag)
 
