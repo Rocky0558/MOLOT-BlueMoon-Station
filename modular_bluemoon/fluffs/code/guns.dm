@@ -1729,22 +1729,20 @@
 //	icon = 'modular_bluemoon/icons/obj/guns/gunkit.dmi'
 //	icon_state = "vp78"
 	product = /obj/item/gun/ballistic/automatic/pistol/enforcer/vp78tactic
-	fromitem = list(/obj/item/gun/ballistic/automatic/pistol/enforcer)
+	fromitem = list(/obj/item/gun/ballistic/automatic/pistol/enforcer, /obj/item/gun/ballistic/automatic/pistol/enforcer/nomag)
 
 /obj/item/gun/ballistic/automatic/pistol/enforcer/vp78tactic
 	DONATE_ITEM_TOOLTIP_PARENT
-	name = "VP78 Tactic"
+	name = "VP78 Tactic (.45)"
 	desc = "A massive, modifide, formidable semi-automatic handgun chambered in .45 inch squash-head rounds. Typicly used by PMC forces. This weapon is also undergoing limited field testing as part of the SolFed next generation pistol program. The slide is engraved with some logo reminding you who's really in charge."
-
 	icon = 'modular_bluemoon/fluffs/icons/obj/vptactic.dmi'
 	icon_state = "vptactic"
-
+	flight_x_offset = 19
+	unique_reskin = null
 	fire_sound = 'modular_bluemoon/fluffs/sound/weapon/vptactic_shot.ogg'
 	load_sound = 'modular_bluemoon/fluffs/sound/weapon/vptactic_reload.ogg'
-//	load_empty_sound =
-//	unlock_sound =
+	load_empty_sound = 'modular_bluemoon/fluffs/sound/weapon/vptactic_reload.ogg'
 	eject_sound = 'modular_bluemoon/fluffs/sound/weapon/vptactic_unload.ogg'
-//	eject_empty_sound
-//	lock_back_sound
+	eject_empty_sound = 'modular_bluemoon/fluffs/sound/weapon/vptactic_unload.ogg'
 
-	unique_reskin = null
+

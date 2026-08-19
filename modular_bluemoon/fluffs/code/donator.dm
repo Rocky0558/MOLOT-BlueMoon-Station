@@ -2542,7 +2542,7 @@
 	slot = ITEM_SLOT_ICLOTHING
 	path = /obj/item/clothing/under/donator/bm/longshirt
 	ckeywhitelist = list("lindaastereih")
-  
+
 /datum/gear/donator/bm/custom_helmet
 	name = "Custom helmet"
 	slot = ITEM_SLOT_HEAD
@@ -2553,4 +2553,4 @@
 	name = "VP78 Tactic ModKit"
 	slot = ITEM_SLOT_BACKPACK
 	path = /obj/item/modkit/vp78tactic
-	ckeywhitelist = list("rocky0105", "SET_YOUR_CKEY_HERE")
+	ckeywhitelist = list("rockymed")
